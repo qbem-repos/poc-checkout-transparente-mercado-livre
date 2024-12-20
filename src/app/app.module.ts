@@ -1,19 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CartaoCreditoFormComponent } from './cartao-credito-form/cartao-credito-form.component';
+import { PixComponent } from './pix/pix.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { SafePipe } from 'src/util/Safe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CheckoutComponent
-  ],
+    CartaoCreditoFormComponent,
+    PixComponent,
+    SafePipe
+   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
